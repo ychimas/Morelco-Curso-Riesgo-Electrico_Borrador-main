@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <style>
+      /* Para pantalla grande */
+      html, body {
+        margin: 0;
+        padding: 0;
+        /* overflow: hidden; */
+        height: 100%; /* Asegura que todo ocupe la pantalla completa */
+      }
+
+      .introduccion {
+        overflow: auto;
+      }
+
+      /* Para pantalla móvil (max-width de 640px o menos) */
+      @media (max-width: 640px) {
+        html, body {
+          overflow: auto; /* Permite el scroll en móviles */
+          height: auto;   /* Permite que el contenido crezca con el scroll */
+        }
+      }
+    </style>
+  </head>
+  <body class="font-main">
+    <div id="root" style="margin: 0; padding: 0;"></div>
+    <script type="module" src="/src/main.jsx"></script>
+     <!-- Incluye jQuery -->
+     <script src="https://code.jquery.com/jquery-3.6.0.min.js" type="module" ></script>
+     <!-- Incluye el plugin después de jQuery -->
+     <script src="././src/assets/js/magnify/js/jquery.magnify.js" type="module"></script>
+     <script src="././src/assets/js/interactividad.js" type="module"></script>
+  </body>
+</html>
